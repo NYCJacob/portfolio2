@@ -2,6 +2,9 @@
 // Your variable overrides-  need to go first for BS default rule
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 
+$fa-font-path:"../../node_modules/font-awesome/fonts";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
 html,
 body {
   width: 100%;
@@ -12,20 +15,59 @@ body {
   top:0;
 }
 
+$font-family-sans-serif:      'Montserrat','Helvetica Neue',Arial,sans-serif;;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif;
+$link-color: #d50000;
+$link-hover-color: #ff1744;
+
+
+//a {
+//  color: $link-color;
+//  text-decoration: $link-decoration;
+//  background-color: transparent; // Remove the gray background on active links in IE 10.
+//  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+//
+//  @include hover {
+//    color: $link-hover-color;
+//    text-decoration: $link-hover-decoration;
+//  }
+//}
+
+header {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+.nav > a {
+  color: #d50000;
+}
+
+.nav-git {
+    @extend .fa;
+    @extend .fa-github;
+}
+
+.nav-linkedin {
+  @extend .fa;
+  @extend .fa-linkedin;
+}
+
+.nav-twitter {
+  @extend .fa;
+  @extend .fa-twitter;
+}
+
+.nav-masthead {
+  font-size: 2em;
+}
+
 // import cover bootstrap example css
 @import "coverExample";
 
 
-// Include parts of Bootstrap
-
-// Required
-@import "functions";
-@import "variables";
-@import "mixins";
-
-// Optional
-@import "reboot";
-@import "type";
-@import "images";
-@import "code";
-@import "grid";
+// Include Bootstrap
+@import "bootstrap";
+@import "bootstrap-grid";
