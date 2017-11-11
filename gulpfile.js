@@ -84,13 +84,20 @@ gulp.task('min-css', function() {
 
 
 // js tasks
+gulp.task('js:move', function () {
+    return gulp.src([
+        'src/js/jquery-slim.min.js',
+        'src/js/bootstrap.bundle.min.js'
+    ])
+        .pipe(gulp.dest('dist/js'));
+})
 
 
 // html tasks
 gulp.task('html:min', function() {
     return gulp.src('src/*.html')
-        .pipe(htmlreplace({js: 'js/app.js', css: 'css/styles.css'}))
-        // .pipe(plugins.htmlmin({collapseWhitespace: true}))
+        // .pipe(htmlreplace({js: 'js/app.js', css: 'css/styles.css'}))
+        .pipe(plugins.htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'));
 });
 
