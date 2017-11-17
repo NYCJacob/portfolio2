@@ -33,9 +33,10 @@
             </p>
             <nav class="nav nav-masthead">
               <!--<a class="nav-link active" href="#">Resume.json</a>-->
-              <a class="nav-link mx-auto nav-git" href="https://github.com/NYCJacob"></a>
-              <a class="nav-link mx-auto nav-linkedin" href="https://www.linkedin.com/in/jbsherman/"></a>
-              <a class="nav-link mx-auto nav-twitter" href="https://twitter.com/JSherman_Esq"></a>
+
+              <a class="nav-link mx-auto nav-git" data-toggle="tooltip" data-placement="bottom" title="some of my code on github" href="https://github.com/NYCJacob"></a>
+              <a class="nav-link mx-auto nav-linkedin" data-toggle="tooltip" data-placement="bottom" title="LinkedIn Profile" href="https://www.linkedin.com/in/jbsherman/"></a>
+              <a class="nav-link mx-auto nav-twitter" data-toggle="tooltip" data-placement="bottom" title="I do not have much time for twitter" href="https://twitter.com/JSherman_Esq"></a>
             </nav>
           </header>
           
@@ -53,6 +54,12 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <!--<script src="js/bootstrap.min.js"></script>-->
     <!-- endbuild -->
+    <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
 
   </body>
 </html>
